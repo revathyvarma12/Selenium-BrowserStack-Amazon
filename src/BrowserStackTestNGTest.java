@@ -19,9 +19,9 @@ import com.relevantcodes.extentreports.ExtentTest;
 public class BrowserStackTestNGTest {
     public WebDriver driver;
     private Local l;
-    ExtentReports reports = new ExtentReports(System.getProperty("user.dir")+"/ExtentReportResults.html", true);
+    ExtentReports reports = new ExtentReports(System.getProperty("user.dir")+"/Reports/ExtentReportResults.html", true);
 
-    ExtentTest test = reports.startTest("BrowserStackTestTestS");
+    ExtentTest test = reports.startTest("BrowserStackTestTest");
 
     @BeforeMethod(alwaysRun = true)
     @org.testng.annotations.Parameters(value = { "config", "environment" })

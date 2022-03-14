@@ -20,8 +20,9 @@ public class BrowserStackTestTest extends BrowserStackTestNGTest{
       //Navigating to amazon
 
         driver.get("https://www.amazon.com");
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphoneX");
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys(Keys.ENTER);
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//div[contains(@class,'search-field')]/input")).sendKeys("iphoneX");
+        driver.findElement(By.id("//div[contains(@class,'search-field')]/input")).sendKeys(Keys.ENTER);
        // test.log(LogStatus.INFO,"Logged in amazon");
         Thread.sleep(3000);
         //Applying filters
